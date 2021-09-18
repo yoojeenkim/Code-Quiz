@@ -1,5 +1,6 @@
 console.log(this);
 var startButton = document.querySelector('.start-button');
+var header = document.querySelector('.header');
 
 var question1 = {
     question: 'Commonly used data types DO NOT include:',
@@ -48,7 +49,7 @@ function init() {
     header.textContent = 'Coding Quiz Challenge';
     header.setAttribute = 'style, text-align:center;'
 }
-//
+
 // var timer = document.getElementById ('timer');
 
 // function countdown() {
