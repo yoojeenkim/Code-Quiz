@@ -1,6 +1,6 @@
 console.log(this);
-var startButton = document.querySelector('.start-button');
 var header = document.querySelector('.header');
+var body = document.querySelector('.body');
 
 var question1 = {
     question: 'Commonly used data types DO NOT include:',
@@ -47,7 +47,13 @@ var questions = [question1, question2, question3, question4, question5];
 //the function init will load the title and start button
 function init() {
     header.textContent = 'Coding Quiz Challenge';
-    header.setAttribute = 'style, text-align:center;'
+    header.setAttribute('style', 'text-align:center; background: #9A8194; color: #EBD8B7; border-bottom: 30px #C6A9A3; font-size: 300%');
+    body.textContent = 'Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!';
+    body.setAttribute('style','text-align:center; background: #fff; color: #black; border-bottom: 30px #C6A9A3; font-size:200%');
+    var startButton = document.createElement('button');
+    startButton.appendChild(body);
+    startButton.textContent = 'Start Quiz!'
+    startButton.setAttribute('style','background-color:purple; color:gold');
 }
 
 // var timer = document.getElementById ('timer');
