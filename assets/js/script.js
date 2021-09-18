@@ -1,3 +1,47 @@
+var startButton = document.querySelector('.start-button');
+
+var question1 = {
+    question: 'Commonly used data types DO NOT include:',
+    choice1: 'strings',
+    choice2: 'booleans',
+    choice3: 'alerts',
+    choice4: 'numbers'
+};
+
+var question2 = {
+    question: 'The condition in an if/else statement is enclosed within',
+    choice1: 'quotes',
+    choice2: 'curly_brackets',
+    chocie3: 'parantheses',
+    choice4: 'square brackets'
+};
+
+var question3 = {
+    question: 'Arrays in JavaScript can be used to store ____.',
+    choice1: 'numbers and strings',
+    choice2: 'other arrays',
+    choice3: 'booleans',
+    choice4: 'all of the above'
+};
+
+var question4 = {
+    question: 'String values must be enclosed with ____ when being assigned to variables.',
+    choice1: 'commas',
+    choice2: 'curcly brackets',
+    choice3: 'quotes',
+    choice4: 'parantheses'
+};
+
+var question5 = {
+    question: 'A very useful tool used during development and debugging for print content to the debugger is:',
+    choice1: 'JavaScript',
+    choice2: 'terminal/bash',
+    choice3: 'for loops',
+    choice4: 'console.log'
+};
+
+var questions = [question1, question2, question3, question4, question5];
+
 // var timer = document.getElementById ('timer');
 
 // function countdown() {
@@ -16,37 +60,3 @@
 //         }
 //     }, 1000);
 // }
-
-var question1 = {
-    //
-}
-
-//Commonly used data types DO NOT include:
-// 1. strings
-// 2. booleans
-// 3. alerts
-// 4. numbers
-// //
-// The condition in an if / else statement is enclosed within _____.
-// 1. quotes
-// 2. curly_brackets
-// 3. parentheses
-// 4. square brackets
-
-// Arrays in JavaScript can be used to store ____.Arrays
-// 1. numbers and strings
-// 2. other arrays
-// 3. booleans
-// 4. all of the above
-// //
-// String values must be enclosed within _____ when being assigned to variables.
-// 1. commas
-// 2. curly brackets
-// 3. quotes
-// 4. parantheses
-
-// A very useful tool used during development and debuggin for print content to the debugger is:
-// 1. JavaScript
-// 2. terminal/bash
-// 3. for loops
-// 4. console.log
