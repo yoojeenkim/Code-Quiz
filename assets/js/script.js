@@ -52,7 +52,7 @@ function init() {
     body.setAttribute('style','text-align:center; background: #fff; color: #black; border-bottom: 30px #C6A9A3; font-size:200%');
     var startButton = document.createElement('button');
     startButton.appendChild(body);
-    startButton.textContent = 'Start Quiz!'
+    startButton.textContent = 'Start Quiz!';
     startButton.setAttribute('style','background-color:purple; color:gold');
 }
 
