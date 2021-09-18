@@ -1,3 +1,4 @@
+console.log(this);
 var startButton = document.querySelector('.start-button');
 
 var question1 = {
@@ -42,6 +43,12 @@ var question5 = {
 
 var questions = [question1, question2, question3, question4, question5];
 
+//the function init will load the title and start button
+function init() {
+    header.textContent = 'Coding Quiz Challenge';
+    header.setAttribute = 'style, text-align:center;'
+}
+//
 // var timer = document.getElementById ('timer');
 
 // function countdown() {
@@ -60,3 +67,6 @@ var questions = [question1, question2, question3, question4, question5];
 //         }
 //     }, 1000);
 // }
+
+//init will fire up the function on startup
+init();
