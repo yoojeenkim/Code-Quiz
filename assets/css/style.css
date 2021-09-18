@@ -1,0 +1,25 @@
+/* #99BBAD
+#EBD8B7
+#C6A9A3
+#9A8194 */
+* {
+    box-sizing:border-box;
+}
+
+body {
+    font-family: Arial;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-start;
+    background: linear-gradient(0deg, rgba(19,41, 61,1) 0%, rgba(237,245. 249,1) 63%);
+}
+
+.header {
+    padding: 40px;
+    text-align: center;
+    background: #9A8194;
+    color: #EBD8B7;
+    border-bottom: 30px #C6A9A3;
+}
