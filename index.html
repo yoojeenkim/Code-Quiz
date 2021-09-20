@@ -8,13 +8,19 @@
     <title>Document</title>
 </head>
 <body>
-    <div class='high-scores'></div>
-    <div class='container'>
-        <div class='header'></div>
-        <div class='body'></div>
-        <div class='footer'></div>
+    <div class='high-score-container'>
+        <a href='/highscores.html' id='high-score-button' class='button'>High Scores</a>
     </div>
-    <div class='timer'></div>
+    <div class='container'>
+        <div id='title' class='column center'>
+            <h1>Coding Quiz Challenge</h1>
+            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answer will penalize your score/time by ten seconds!</p>
+            <a class='button'>Start Game</a>
+        </div>
+        <div id='quiz'></div>
+    </div>
+    <div class='results'></div>
+    <!-- <div class='timer'></div> -->
 </body>
-<script src='./assets//js/script.js'></script>
+<script src='./assets/js/script.js'></script>  
 </html>

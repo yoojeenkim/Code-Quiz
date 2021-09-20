@@ -1,26 +1,14 @@
-/* #99BBAD
-#EBD8B7
-#C6A9A3
-#9A8194 */
-* {
-    box-sizing:border-box;
+body{
+	font-size: 20px;
+	font-family: 'Work Sans', sans-serif;
+	color: #333;
+  font-weight: 300;
+  text-align: center;
+  background-color: #f8f6f0;
 }
 
-body {
-    font-family: Arial;
-    margin: 0;
-}
-
-.container {
-    display: flex;
-}
-
-.header {
-    flex-wrap: wrap;
-    padding: 40px;
-}
-
-.body {
-    flex-wrap: wrap;
-    padding: 40px;
+.container{
+  position: relative;
+  height: 200px;
+  margin-top: 40px;
 }
