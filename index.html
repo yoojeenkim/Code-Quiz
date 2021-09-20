@@ -8,19 +8,37 @@
     <title>Document</title>
 </head>
 <body>
-    <div class='high-score-container'>
-        <a href='/highscores.html' id='high-score-button'>View Highscores</a>
+    <div class='space-between'>
+        <div>
+            <a href='/highscores.html' id='high-score-button'>View Highscores</a>
+        </div>
+        <div id='timer'>Time: 0</div>
     </div>
-    <div class='container'>
-        <div id='title' class='column center'>
+    <div class='container' data-attribute='show'>
+        <div class='column center'>
             <h1>Coding Quiz Challenge</h1>
             <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answer will penalize your score/time by ten seconds!</p>
             <a class='button'>Start Quiz</a>
         </div>
-        <div id='quiz'></div>
+        <div id='quiz-container' data-attribute='hidden'>
+            <div class='justify-center column'>
+                <div id='question'>Question goes here...</div>
+                <div class='choices-container'>
+                    <p class='choice-text'>Choices go here</p>
+                </div>
+                <div class='choices-container'>
+                    <p class='choice-text'>Choices go here</p>
+                </div>
+                <div class='choices-container'>
+                    <p class='choice-text'>Choices go here</p>
+                </div>
+                <div class='choices-container'>
+                    <p class='choice-text'>Choices go here</p>
+                </div>
+            </div>
+        </div>
     </div>
     <div class='results'></div>
-    <!-- <div class='timer'></div> -->
 </body>
 <script src='./assets/js/script.js'></script>  
 </html>
