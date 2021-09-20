@@ -2,45 +2,59 @@ console.log(this);
 var header = document.querySelector('.header');
 var body = document.querySelector('.body');
 
-var question1 = {
-    question: 'Commonly used data types DO NOT include:',
-    choice1: 'strings',
-    choice2: 'booleans',
-    choice3: 'alerts',
-    choice4: 'numbers'
-};
+var questions = [
+    {
+        question: 'Commonly used data types DO NOT include:',
+        choices: {
+            choice1: 'strings',
+            choice2: 'booleans',
+            choice3: 'alerts',
+            choice4: 'numbers'
+        },
+        correctAnswer: 'choice3'
+    },
+    {
+        question: 'The condition in an if/else statement is enclosed within',
+        choices: {
+            choice1: 'quotes',
+            choice2: 'curly_brackets',
+            chocie3: 'parantheses',
+            choice4: 'square brackets'
+        },
+        correctAnswer: 'choice3'
+    },
+    {
+        question: 'Arrays in JavaScript can be used to store ____.',
+        choices: {
+            choice1: 'numbers and strings',
+            choice2: 'other arrays',
+            choice3: 'booleans',
+            choice4: 'all of the above'
+        },
+        correctAnswer: 'choice4'
+    },
+    {
+        question: 'String values must be enclosed with ____ when being assigned to variables.',
+        choices: {
+            choice1: 'commas',
+            choice2: 'curly brackets',
+            choice3: 'quotes',
+            choice4: 'parantheses'
+        },
+        correctAnswer: 'choice3'
+    },
 
-var question2 = {
-    question: 'The condition in an if/else statement is enclosed within',
-    choice1: 'quotes',
-    choice2: 'curly_brackets',
-    chocie3: 'parantheses',
-    choice4: 'square brackets'
-};
-
-var question3 = {
-    question: 'Arrays in JavaScript can be used to store ____.',
-    choice1: 'numbers and strings',
-    choice2: 'other arrays',
-    choice3: 'booleans',
-    choice4: 'all of the above'
-};
-
-var question4 = {
-    question: 'String values must be enclosed with ____ when being assigned to variables.',
-    choice1: 'commas',
-    choice2: 'curcly brackets',
-    choice3: 'quotes',
-    choice4: 'parantheses'
-};
-
-var question5 = {
-    question: 'A very useful tool used during development and debugging for print content to the debugger is:',
-    choice1: 'JavaScript',
-    choice2: 'terminal/bash',
-    choice3: 'for loops',
-    choice4: 'console.log'
-};
+    {
+        question: 'A very useful tool used during development and debugging for print content to the debugger is:',
+        choices: {
+            choice1: 'JavaScript',
+            choice2: 'terminal/bash',
+            choice3: 'for loops',
+            choice4: 'console.log'
+        },
+        correctAnswer: 'choice4'
+    }
+];
 
 var questions = [question1, question2, question3, question4, question5];
 
