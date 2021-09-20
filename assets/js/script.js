@@ -70,6 +70,26 @@ function init() {
     startButton.setAttribute('style','background-color:purple; color:gold');
 }
 
+function startQuiz(questions,quizContainer, resultsContainer, submitButton) {
+
+    //should i use a for loop?
+        function showQuestion(questions, quizContainer){
+            //code for showing questions
+        }
+
+        function showResult(questions, quizContainer, resultsContainer){
+            //code for showing the result in the footer
+        }
+
+        //show question
+        showQuestion(questions,quizContainer);
+
+        //when user clicks correct answer, show the result
+        submitButton.onclick = function(){
+            showResult(questions, quizContainer,resultsContainer);
+        }
+    //end of for loop
+}
 // var timer = document.getElementById ('timer');
 
 // function countdown() {
