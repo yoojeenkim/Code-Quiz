@@ -1,3 +1,7 @@
+var container = document.querySelector('.container');
+var startButton = document.querySelector('#start-button');
+var quizContainer = document.querySelector('#quiz-container');
+
 var questions = [
     {
         question: 'Commonly used data types DO NOT include:',
@@ -51,3 +55,8 @@ var questions = [
         correctAnswer: 'choice4'
     }
 ];
+
+startButton.addEventListener('click', function() {
+  container.style.display = 'none';
+  quizContainer.style.display = 'flex';
+})
