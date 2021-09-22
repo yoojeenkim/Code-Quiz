@@ -87,7 +87,19 @@ p {
   padding: .5rem;
 }
 
-.results-container {
+.subtext {
+  font-size: 2.45rem;
+  margin-bottom: 4rem;
+}
+
+.score-box {
+  margin-bottom: 1rem;
+  padding: 0rem;
+  font-size: 4rem;
+  border: none;
+}
+
+.result-container {
   display: flex;
   max-width: 80rem;
   margin: 0 auto;
