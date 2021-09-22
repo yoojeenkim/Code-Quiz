@@ -47,6 +47,10 @@ p {
   align-items: center;
 }
 
+.row {
+  display: flex;
+  flex-direction: column;
+}
 .button {
   font-size: 2.4rem;
   padding: .4rem;
