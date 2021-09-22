@@ -1,3 +1,4 @@
+// all variables listed at the top, is this hoisting?
 var container = document.querySelector('.container');
 var startButton = document.querySelector('#start-button');
 var quizContainer = document.querySelector('#quiz-container');
@@ -13,6 +14,7 @@ var choiceButton4 = document.querySelector('.choice-button4');
 var results = document.querySelector('.results');
 var finalScore = document.querySelector('#final-score-container');
 var timeEl = document.querySelector('#timer');
+var inputInitials = document.querySelector('#input-score');
 var submitButton = document.querySelector('#submit-button');
 var secondsLeft = 75;
 var i = 0;
@@ -73,6 +75,8 @@ var questions = [
 ];
 
 function submitScore () {
+    localStorage.setItem('intials', inputInitials.value);
+    localStorage.setItem('score', secondsLeft);
     window.location.href = './highscores.html';
 }
 
