@@ -12,8 +12,11 @@ var choiceButton3 = document.querySelector('.choice-button3');
 var choiceButton4 = document.querySelector('.choice-button4');
 var results = document.querySelector('.results');
 var finalScore = document.querySelector('#final-score-container');
-
+var timeEl = document.querySelector('#timer');
+var submitButton = document.querySelector('#submit-button');
+var secondsLeft = 75;
 var i = 0;
+var timerInterval = '';
 
 var questions = [
     {
@@ -69,7 +72,12 @@ var questions = [
     }
 ];
 
+function submitScore () {
+    window.location.href = './highscores.html';
+}
+
 function showResults () {
+    clearInterval(timerInterval);
     questions.textContent = 'All done!';
     quizContainer.style.display = 'none';
     finalScore.style.display = 'flex';
@@ -80,6 +88,7 @@ function checkAnswer1 () {
         results.textContent = 'Correct!';
     } else {
         results.textContent = 'Wrong!'
+        secondsLeft = secondsLeft - 10;
     }
     i++;
     generateNewQuestion();
@@ -90,6 +99,7 @@ function checkAnswer2 () {
         results.textContent = 'Correct!';
     }  else {
         results.textContent = 'Wrong!';
+        secondsLeft = secondsLeft - 10;
     }
     i++;
     generateNewQuestion();
@@ -100,6 +110,7 @@ function checkAnswer3 () {
         results.textContent = 'Correct!';
     }  else {
         results.textContent = 'Wrong!';
+        secondsLeft = secondsLeft - 10;
     }
     i++;
     generateNewQuestion();
@@ -110,6 +121,7 @@ function checkAnswer4 () {
         results.textContent = 'Correct!';
     }  else {
         results.textContent = 'Wrong!';
+        secondsLeft = secondsLeft - 10;
     }
 
     i++;
@@ -134,6 +146,18 @@ function generateNewQuestion () {
 
 }
 
+function setTime() {
+    timerInterval = setInterval(function() {
+        secondsLeft--;
+        timeEl.textContent = 'Timer: ' + secondsLeft;
+    }, 1000);
+
+    if(secondsLeft === 0) {
+        clearInterval(timerInterval);
+        showResults();
+    }
+}
+
 function startQuiz () {
     generateNewQuestion(); 
 }
@@ -142,4 +166,7 @@ startButton.addEventListener('click', function() {
   container.style.display = 'none';
   quizContainer.style.display = 'flex';
   startQuiz();
+  setTime();
 })
+
+submitButton.addEventListener('click', submitScore);
