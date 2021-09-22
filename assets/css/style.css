@@ -78,10 +78,25 @@ p {
   padding: .5rem;
 }
 
-.choice-text {
+.choice-text1,
+.choice-text2,
+.choice-text3,
+.choice-text4 {
   color: #fff;
   font-size: 1.8rem;
   padding: .5rem;
+}
+
+.results-container {
+  display: flex;
+  max-width: 80rem;
+  margin: 0 auto;
+  border-top: 2px solid #E0E2DB;
+}
+
+.results {
+  font-size: 2.2rem;
+  font-style: italic;
 }
 
 #question {
@@ -92,7 +107,8 @@ p {
 
 #quiz-container {
   width: 75vw;
-  height: 55vh;
+  padding-top: 100px;
+  padding-bottom: 5px;
   display: none;
   justify-content: center;
   align-items: center;
@@ -108,6 +124,15 @@ p {
 #timer {
   font-size: 2.4rem;
   padding-right: 1rem;
+}
+
+#final-score-container {
+  display: none;
+  width: 75vw;
+  padding-top: 100px;
+  padding-bottom: 5px;
+  max-width: 80rem;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 768px) {
