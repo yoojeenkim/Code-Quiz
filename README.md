@@ -1,9 +1,9 @@
-# Code-Quiz
+# Code Quiz Homework #4
 
-## User Story
+## Overview
 As a coding student, I wanted to take a timed quiz on Javascript fundamentals in which I will be docked points of the timer if I get a question wrong. The final score will be saved to gauge my progress along with my initials.
 
-## Criteria
+## Key Functions
 
 ```
 When user clicks the start button, a timer starts along with the presentation of the first question.
