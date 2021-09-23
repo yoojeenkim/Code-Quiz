@@ -18,7 +18,6 @@ var inputInitials = document.querySelector('#input-score');
 var submitButton = document.querySelector('#submit-button');
 var backButton = document.querySelector('#back-button');
 var clearButton = document.querySelector('#clear-button');
-var list = document.querySelector('.list');
 var secondsLeft = 75;
 var i = 0;
 var timerInterval = '';
@@ -212,8 +211,4 @@ if(backButton){
     backButton.addEventListener('click', function() {
         window.location.href = './index.html';
     });
-}
-
-if(clearButton){
-    clearButton.addEventListener('click', submitScore);
 }
