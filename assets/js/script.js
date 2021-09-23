@@ -22,6 +22,7 @@ var secondsLeft = 75;
 var i = 0;
 var timerInterval = '';
 
+//all questions and choices into one object
 var questions = [
     {
         question: 'Commonly used data types DO NOT include:',
@@ -76,14 +77,17 @@ var questions = [
     }
 ];
 
+//function that runs to submit the score
 function submitScore (event) {
     event.preventDefault();
 
+    //detects if no initals are put in
     if (inputInitials.value === '') {
         alert('Please enter your intials!');
         return;
     }
 
+    //grabs local array of scores
     var highScores = localStorage.getItem('high scores');
     var scoresArray;
 
@@ -104,8 +108,8 @@ function submitScore (event) {
     var scoresArrayString = JSON.stringify(scoresArray);
     localStorage.setItem('high scores', scoresArrayString);
 
+    //directs user to highscores html
     window.location.href = './highscores.html';
-    displayScore();
 }
 
 function showResults () {

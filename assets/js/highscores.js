@@ -23,4 +23,5 @@ if(clearButton){
     clearButton.addEventListener('click', clearScore);
 }
 
+//displays score upon arrival of high scores html
 displayScore();
