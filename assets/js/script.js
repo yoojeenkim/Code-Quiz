@@ -16,6 +16,9 @@ var finalScore = document.querySelector('#final-score-container');
 var timeEl = document.querySelector('#timer');
 var inputInitials = document.querySelector('#input-score');
 var submitButton = document.querySelector('#submit-button');
+var backButton = document.querySelector('#back-button');
+var clearButton = document.querySelector('#clear-button');
+var list = document.querySelector('.list');
 var secondsLeft = 75;
 var i = 0;
 var timerInterval = '';
@@ -74,10 +77,36 @@ var questions = [
     }
 ];
 
-function submitScore () {
-    localStorage.setItem('intials', inputInitials.value);
-    localStorage.setItem('score', secondsLeft);
+function submitScore (event) {
+    event.preventDefault();
+
+    if (inputInitials.value === '') {
+        alert('Please enter your intials!');
+        return;
+    }
+
+    var highScores = localStorage.getItem('high scores');
+    var scoresArray;
+
+    if (highScores === null) {
+        scoresArray = [];
+    } else {
+        scoresArray = JSON.parse(highScores)
+    }
+
+    var userScore = {
+        initials: inputInitials.value.trim(),
+        score: secondsLeft
+    };
+
+    console.log(userScore);
+    scoresArray.push(userScore);
+
+    var scoresArrayString = JSON.stringify(scoresArray);
+    localStorage.setItem('high scores', scoresArrayString);
+
     window.location.href = './highscores.html';
+    displayScore();
 }
 
 function showResults () {
@@ -166,11 +195,25 @@ function startQuiz () {
     generateNewQuestion(); 
 }
 
-startButton.addEventListener('click', function() {
-  container.style.display = 'none';
-  quizContainer.style.display = 'flex';
-  startQuiz();
-  setTime();
-})
+if(startButton){
+    startButton.addEventListener('click', function() {
+        container.style.display = 'none';
+        quizContainer.style.display = 'flex';
+        startQuiz();
+        setTime();
+    });
+}
 
-submitButton.addEventListener('click', submitScore);
+if(submitButton){
+    submitButton.addEventListener('click', submitScore);
+}
+
+if(backButton){
+    backButton.addEventListener('click', function() {
+        window.location.href = './index.html';
+    });
+}
+
+if(clearButton){
+    clearButton.addEventListener('click', submitScore);
+}
