@@ -112,6 +112,7 @@ function submitScore (event) {
     window.location.href = './highscores.html';
 }
 
+//this function ends the quiz and stops the timer
 function showResults () {
     clearInterval(timerInterval);
     questions.textContent = 'All done!';
@@ -119,6 +120,7 @@ function showResults () {
     finalScore.style.display = 'flex';
 }
 
+//each of these functions checks if the answer that the user select is correct and directs the user to a new generation of a question
 function checkAnswer1 () {
     if (questions[i].correctAnswer == 'choice1') {
         results.textContent = 'Correct!';
@@ -164,6 +166,7 @@ function checkAnswer4 () {
     generateNewQuestion();
 }
 
+//generates and displays contents of a new question
 function generateNewQuestion () {
     if(i < questions.length) {
         quizQuestion.textContent = questions[i].question;
@@ -182,6 +185,7 @@ function generateNewQuestion () {
 
 }
 
+//timer
 function setTime() {
     timerInterval = setInterval(function() {
         secondsLeft--;

@@ -23,6 +23,10 @@ The user will be directed to enter their initials and their score will be saved 
 
 ## Resources
 
+[Link to GitHub Repository](https://github.com/yoojeenkim/Code-Quiz)
+
+[Link to Working Website on Github](https://yoojeenkim.github.io/Code-Quiz/)
+
 [Javascript Tutorial on Query Selectors](https://www.javascripttutorial.net/javascript-dom/javascript-queryselector/)
 
 [MDN Web Docs on Local Storage and Objects](https://developer.mozilla.org/en-US/docs/Web/API/Storage)
